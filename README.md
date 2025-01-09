@@ -1,5 +1,5 @@
 # Amx Mod X Valorant Kill Sounds.
----
+
 This addon plays Valorant kill sounds for your Counter Strike 1.6 server.
 
 Caches sound files using `precache_sound`.
