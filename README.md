@@ -1,6 +1,6 @@
 # Amx Mod X Valorant Kill Sounds.
 ---
-This plugin plays the post-kill `.wav` file for your `counter Strike` `1.6` server using the `amx mod x` API.
+This plugin plays the post kill audio file for your counter strike 1.6 server.
 
 Caches sound files using `precache_sound`.
 
