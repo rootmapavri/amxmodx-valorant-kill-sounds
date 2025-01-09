@@ -14,7 +14,10 @@ public plugin_init()
     register_plugin(PLUGIN, VERSION, AUTHOR)
     register_event("DeathMsg", "newkill", "a")
     register_event("HLTV", "round_start", "a", "1=0") 
+}
 
+public plugin_precache()
+{
     // Ses dosyalarını önbelleğe al
     precache_sound("alazul/kill1.wav")
     precache_sound("alazul/kill2.wav")
@@ -36,9 +39,11 @@ public newkill()
     g_iKills[killer]++
 
     new soundfile[64]
-    format(soundfile, charsmax(soundfile), "alazul/kill%d.wav", (g_iKills[killer] - 1) % MAX_KILLS + 1)
+    // Ses dosyası adını oluştur
+    format(soundfile, charsmax(soundfile), "alazul/kill%d.wav", min(g_iKills[killer], MAX_KILLS))
 
-    client_cmd(killer, "play %s", soundfile)
+    // Ses dosyasını oynat
+    client_cmd(0, "spk %s", soundfile)
 }
 
 public round_start()
