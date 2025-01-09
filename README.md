@@ -6,5 +6,5 @@ Caches sound files using `precache_sound`.
 
 After the round ends, `round_start` resets the counter for each player and `.wav` starts the counter from zero for the audio file.
 
-
+[Valorant Kill Sound Preview](https://vimeo.com/1045447706)
 [Valorant Kill Sounds](https://www.youtube.com/watch?v=lfu_WZ6p51U)
